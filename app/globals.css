@@ -85,3 +85,34 @@ body {
   left: -8px;
   transform: translate(-50%, -50%);
 }
+
+.hero_left_p {
+  font-family: var(--font-rob);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.hero_left_p_bf{
+  position: relative;
+  font-size: 10px;
+}
+
+.hero_left_p_bf::before{
+  content: "";
+  height: 100%;
+  width: 2px;
+  background-color: #D9D9D9;
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  transform: translate(-50%, -50%);
+}
+
+
+.img_card {
+  position: absolute;
+  top: -50px;
+  right: -15px;
+  width: 337px;
+
+}

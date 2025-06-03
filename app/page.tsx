@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import CoffeeSlider from "@/components/CoffeeSlider";
+import ImageSlider from "@/components/CoffeeSlider";
 
 export default function Home() {
   // Main homepage structure based on Figma layout
@@ -24,6 +26,8 @@ export default function Home() {
      width={155}
      height={140.7}
      />
+
+    
     
     </div>
     <ul className="hidden  md:flex space-x-18 font-[600] text-white text-[20px] nav_button ">
@@ -48,7 +52,7 @@ export default function Home() {
      </i>
     </button>
    </nav>
-   <section className="relative max-w-[1440px] mx-auto  mx-auto px-4 sm:px-6 lg:px-8 mt-18 flex flex-col md:flex-row items-center md:items-start gap-6">
+   <section className="relative max-w-[1440px] mx-auto  px-4 sm:px-6 lg:px-8 mt-24 flex flex-col md:flex-row items-center md:items-start gap-6">
    <div className="flex-1 max-w-md md:max-w-none">
     <h1 className="text-white text-[48px] font-[700]  leading-[1.5] tracking-wide">
      Brewing
@@ -75,7 +79,18 @@ export default function Home() {
     </button>
 </div>
    </div>
-   <div className="">
+   <div className=" relative">
+   <div className=" img_card rounded-xl bg-[#4A7639] flex px-[30] py-[11px]  justify-between items-center">
+     <p className=" hero_left_p">Join Our <br/> Community</p>
+      <div className="flex gap-4 items-center">
+        <p className="hero_left_p hero_left_p_bf">to enjoy monthly coffe
+          <br/> surprises tailored to <br/> your taste</p>
+          <div className=" flex items-center justify-center h-[45px] w-[45px] rounded-full bg-[#F8F8F8]">
+            <img src={"/arrow.png"} alt="" width={17}/>
+          </div>
+        
+      </div>
+     </div>
     <Image 
     alt="Top view of a coffee cup with latte 
     art and green leaves around it on dark background" 
@@ -107,30 +122,23 @@ export default function Home() {
   </div>
   {/* <!-- Hero Section --> */}
 
-
-  
-  
-  
   <section className="  max-w-[1189px] mx-auto px-4 sm:px-6 lg:px-8 mt-20 relative flex flex-col items-center text-center">
-   <h2 className="  text-green-600 font-bold text-lg uppercase tracking-widest">
+   <h2 className="  text-green-600 font-bold  uppercase tracking-widest text-5xl">
    <span className="text-[#3F2305]">We</span>  <span className=" text-[#4A7639]">provide</span> 
    </h2>
-   <h3 className="text-gray-900 dark:text-white text-3xl font-extrabold mt-2">
+   <h3 className="text-gray-900 dark:text-white  text-4xl font-bold mt-2">
     <span className="text-[#4A7639]">QUALITY</span> 
     <span  className="text-[#3F2305]">COFFEE TO DELIVER</span>
     
    </h3>
-   <p className="text-gray-500 max-w-xl mt-3 text-sm sm:text-base">
-   Discover coffee made with love. Brewing <br/> happiness, one cup at a time.
+   <p className="text-gray-500 max-w-xl mt-3 text-sm sm:text-[18px]">
+   Discover coffee made with love. Brewing happiness, one cup at a time.
    </p>
  
   </section>
-  {/* <!-- Three coffee images row --> */}
-  <section className="max-w-[1189px] mx-auto px-4 sm:px-6 lg:px-8 mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
-   <img alt="Coffee cup with beans and saucer on wooden table, warm lighting" className="rounded-lg object-cover w-full h-64 sm:h-72" height="320" src="https://storage.googleapis.com/a1aa/image/714a48d8-dd42-4212-7184-b19e7627c359.jpg" width="320"/>
-   <img alt="Coffee cup with latte art and coffee beans on dark wooden table" className="rounded-lg object-cover w-full h-64 sm:h-72" height="320" src="https://storage.googleapis.com/a1aa/image/c82814d2-1adc-4d05-9860-8c8ee524b2d4.jpg" width="320"/>
-   <img alt="Coffee cup with cream and coffee beans on rustic table" className="rounded-lg object-cover w-full h-64 sm:h-72" height="320" src="https://storage.googleapis.com/a1aa/image/80dfdc3b-1b9a-4a38-046f-ba008d8baa7f.jpg" width="320"/>
-  </section>
+    {/* <!-- Three coffee images row --> */}
+
+    <ImageSlider />
   {/* <!-- Our Product Section --> */}
   <section className="max-w-[1189px] mx-auto px-4 sm:px-6 lg:px-8 mt-20 relative">
    <div className="border border-blue-400 rounded-lg p-6 max-w-4xl mx-auto text-center">
