@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import CoffeeSlider from "@/components/CoffeeSlider";
 import ImageSlider from "@/components/CoffeeSlider";
 
 export default function Home() {
