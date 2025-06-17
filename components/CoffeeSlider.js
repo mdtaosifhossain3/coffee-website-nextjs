@@ -70,7 +70,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto p-4">
+    <div className="max-w-[1440px] mx-auto px-4  ">
       {/* Main slider container */}
       <div className="relative  rounded-3xl overflow-visible py-12 px-32">
         {/* Explore more badge */}

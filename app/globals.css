@@ -37,6 +37,12 @@ body {
   font-family: var(--font-main), sans-serif;
 }
 
+.bg2{ 
+  background-image: url('/hero_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;}
+
 .home{
   position: relative;
   
