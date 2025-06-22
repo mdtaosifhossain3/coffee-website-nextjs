@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 const testimonials = [
   {
     id: 1,
@@ -30,11 +30,39 @@ const testimonials = [
 const WhatCustomerSay = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [pulseIndex, setPulseIndex] = useState(null);
+  const [fadeIn, setFadeIn] = useState(false);
+  const intervalRef = useRef();
+
+  const testimonialsLength = testimonials.length;
 
   const handleDotClick = (index) => {
     setActiveTestimonial(index);
     setPulseIndex(index);
+    // Reset interval on manual change
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      startAutoChange();
+    }
   };
+
+  // Auto change function
+  const startAutoChange = () => {
+    intervalRef.current = setInterval(() => {
+      setActiveTestimonial((prev) => (prev + 1) % testimonialsLength);
+    }, 4000);
+  };
+
+  useEffect(() => {
+    startAutoChange();
+    return () => clearInterval(intervalRef.current);
+  }, []);
+
+  // Fade-in animation on testimonial change
+  useEffect(() => {
+    setFadeIn(true);
+    const timeout = setTimeout(() => setFadeIn(false), 500);
+    return () => clearTimeout(timeout);
+  }, [activeTestimonial]);
 
   return (
     <>
@@ -70,19 +98,33 @@ const WhatCustomerSay = () => {
               alt="Sophia M."
               width={280}
               height={280}
-              className="w-full h-full object-cover"
+              className={`w-full h-full object-cover ${
+                fadeIn ? "animate-bounce" : ""
+              }`}
             />
           </div>
-          <h3 className="text-white  text-lg mb-1 rbf">
+          <h3
+            className={`text-white  text-lg mb-1 rbf ${
+              fadeIn ? "animate-fade-in" : ""
+            }`}
+          >
             {testimonials[activeTestimonial].name}
           </h3>
-          <p className=" text-sm rbf text-[#E8E8E8]">
+          <p
+            className={`text-sm rbf text-[#E8E8E8] ${
+              fadeIn ? "animate-fade-in" : ""
+            }`}
+          >
             {testimonials[activeTestimonial].title}
           </p>
         </div>
 
         {/* Testimonial Content */}
-        <div className="bg-[#3D1D17] rounded-tr-2xl rounded-br-2xl pt-[57px] px-20  flex-col  pb-2 flex-1 relative  h-[230px]">
+        <div
+          className={`bg-[#3D1D17] rounded-tr-2xl rounded-br-2xl pt-[57px] px-20  flex-col  pb-2 flex-1 relative  h-[230px] transition-all duration-500 ${
+            fadeIn ? "animate-fade-in" : ""
+          }`}
+        >
           <p className="text-white text-base leading-relaxed rbf">
             {testimonials[activeTestimonial].description}
           </p>
@@ -141,6 +183,19 @@ const WhatCustomerSay = () => {
             }
             100% {
               transform: scale(1.1);
+            }
+          }
+          .animate-fade-in {
+            animation: fade-in 0.5s;
+          }
+          @keyframes fade-in {
+            0% {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
             }
           }
         }
