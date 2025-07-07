@@ -67,29 +67,29 @@ const WhatCustomerSay = () => {
   return (
     <>
       <section className=" relative mx-auto  mt-44 flex flex-col md:flex-row items-center gap-6">
-        <div className="flex-1 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-left mb-20 ">
+        <div className="flex-1 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8  mb-20 text-center md:text-left ">
           <h2 className="text-[#3F2305] font-bold text-5xl uppercase tracking-widest">
             WHAT
           </h2>
           <h3 className="text-[#3F2305]   text-4xl font-extrabold mt-2">
             our <span className="text-[#4A7639] ">customers</span> say
           </h3>
-          <p className="text-gray-500 max-w-md mt-3 text-base sm:text-base">
+          <p className="text-gray-500 md:max-w-md mt-3 text-base sm:text-base ">
             Discover coffee made with love. Brewing happiness, one cup at a
             time.{" "}
           </p>
         </div>
         {/* Left  Flower Customer say */}
         <img
-          alt="Decorative coffee beans cluster with leaves 
+          alt="Decorative coffee beans cluster with leaves
       on top left side"
-          className="absolute  right-0 top-[-300px] hidden md:block"
+          className="absolute  right-0 top-[-170px] lg:top-[-300px] hidden md:block sm:w-[220px] md:w-[280px] lg:w-[380px]"
           height="319px"
           src="/cr.png"
           width="380px"
         />
       </section>
-      <div className="flex items-center max-w-5xl mx-auto  bg-gray-50 px-6 mt-12 xl:mt-0">
+      <div className="flex items-center flex-col gap-4 md:gap-0 md:flex-row  max-w-5xl mx-auto  bg-gray-50 px-6 md:mt-12 xl:mt-0">
         {/* Customer Profile Section */}
         <div className="flex flex-col items-center bg-[#436934] rounded-2xl p-6 min-w-[302px] min-h-[315px] ">
           <div className="w-[270px] h-[200px] rounded-2xl overflow-hidden mb-4 bg-gray-200">
@@ -121,7 +121,7 @@ const WhatCustomerSay = () => {
 
         {/* Testimonial Content */}
         <div
-          className={`bg-[#3D1D17] rounded-tr-2xl rounded-br-2xl pt-[57px] px-20  flex-col  pb-2 flex-1 relative  h-[230px] transition-all duration-500 ${
+          className={`bg-[#3D1D17] rounded-2xl md:rounded-l-none  rounded-tr-2xl rounded-br-2xl pt-[57px] px-20  flex-col  pb-2 flex-1 relative  h-[230px] transition-all duration-500 ${
             fadeIn ? "animate-fade-in" : ""
           }`}
         >
@@ -151,7 +151,7 @@ const WhatCustomerSay = () => {
                 }}
               >
                 <span
-                  className={`block rounded-full transition-all duration-300 
+                  className={`block rounded-full transition-all duration-300
                     ${
                       index === activeTestimonial
                         ? "bg-[#A36939] shadow-xl scale-125 "

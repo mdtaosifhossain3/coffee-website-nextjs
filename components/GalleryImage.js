@@ -3,7 +3,7 @@ import Image from "next/image";
 const GalleryImage = () => {
   return (
     <div>
-      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8  text-right mt-44 mb-20">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8  md:text-right mt-44 mb-20 text-center">
         <h2 className="text-gray-900  font-extrabold text-5xl">
           OUR <span className="text-[#4A7639]">SHOP</span>
         </h2>

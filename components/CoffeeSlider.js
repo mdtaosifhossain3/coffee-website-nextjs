@@ -53,16 +53,16 @@ export default function ImageSlider() {
 
     if (i === current) return "z-20 translate-x-0";
     if (i === left)
-      return "-translate-x-full sm:-translate-x-80 lg:-translate-x-96 z-10";
+      return "-translate-x-30 sm:-translate-x-50 md:-translate-x-70 lg:-translate-x-80 xl:-translate-x-96 z-10";
     if (i === right)
-      return "translate-x-full sm:translate-x-80 lg:translate-x-96 z-10";
+      return "translate-x-30 sm:translate-x-50  md:translate-x-70 lg:translate-x-80 xl:translate-x-96 z-10";
     return "opacity-0 scale-75 pointer-events-none";
   };
 
   const size = (i) =>
     i === current
-      ? "w-64 h-80 sm:w-80 sm:h-[22rem] lg:w-[410px] lg:h-[499px]"
-      : "w-52 h-64 sm:w-64 sm:h-80 lg:w-[312px] lg:h-[379px]";
+      ? " w-48 h-64 sm:w-52 sm:h-72 md:w-72 md:h-96 lg:w-80 lg:h-[26rem]  xl:w-[410px] xl:h-[499px]"
+      : "w-32 h-48 sm:w-36 sm:h-52 md:w-48 md:h-72  lg:w-56 lg:h-80 xl:w-[312px] xl:h-[379px] ";
 
   /* --------------------------------------------------------------------- */
   return (
