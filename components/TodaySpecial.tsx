@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const TodaySpecial = () => {
   return (
     <section className="relative  px-4 sm:px-6 lg:px-8 mt-20 bg-black  overflow-hidden min-h-[612px]  flex items-center justify-center bg2">
@@ -17,22 +19,22 @@ const TodaySpecial = () => {
         </button>
       </div>
 
-      <img
+      <Image
         alt="Decorative coffee beans cluster with leaves
     on top left side"
         className="absolute  left-0  hidden md:block md:w-[200px] lg:w-[380px] "
-        height="319px"
+        height="319"
         src="/fll.png"
-        width="380px"
+        width="380"
       />
       {/* Right Flower */}
-      <img
+      <Image
         alt="Decorative coffee beans cluster with leaves
       on top left side"
         className="absolute  right-0  hidden md:block md:w-[200px] lg:w-[380px] "
-        height="319px"
+        height="319"
         src="/rightf.png"
-        width="380px"
+        width="380"
       />
     </section>
   );

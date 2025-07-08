@@ -4,13 +4,13 @@ const GalleryImage = () => {
   return (
     <div>
       <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8  md:text-right mt-44 mb-20 text-center">
-        <h2 className="text-gray-900  font-extrabold text-5xl">
+        <h2 className="text-gray-900  font-extrabold sm:text-5xl">
           OUR <span className="text-[#4A7639]">SHOP</span>
         </h2>
-        <p className="text-gray-700 mt-1 font-semibold text-4xl">
+        <p className="text-gray-700 mt-1 font-semibold sm:text-4xl">
           our dream <span className="text-[#4A7639]">gallery</span>
         </p>
-        <p className=" text-black text-[12px] mt-2">
+        <p className=" text-black text-[8px] sm:text-[12px] mt-2">
           Discover coffee made with love. Brewing <br /> happiness, one cup at a
           time.
         </p>

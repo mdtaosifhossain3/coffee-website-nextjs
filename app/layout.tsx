@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
-import { Syncopate,Poppins ,Roboto } from "next/font/google";
+import { Syncopate, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
-
+import Header from "@/components/Header";
 
 const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'], // Add the weights you need
-  variable: '--font-roboto',
+  subsets: ["latin"],
+  weight: ["400", "500", "700"], // Add the weights you need
+  variable: "--font-roboto",
 });
 
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'], // Choose the weights you need
-  variable: '--font-poppins',
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // Choose the weights you need
+  variable: "--font-poppins",
 });
-
 
 const syncopate = Syncopate({
   variable: "--font-syncopate",
@@ -33,10 +32,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"  className={`${syncopate.variable} ${poppins.variable} ${roboto.variable} `}>
-      <body
-       
-      >
+    <html
+      lang="en"
+      className={`${syncopate.variable} ${poppins.variable} ${roboto.variable} `}
+    >
+      <body>
+        <Header />
         {children}
       </body>
     </html>

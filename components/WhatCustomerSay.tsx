@@ -29,13 +29,13 @@ const testimonials = [
 ];
 const WhatCustomerSay = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-  const [pulseIndex, setPulseIndex] = useState(null);
+  const [pulseIndex, setPulseIndex] = useState<number | null>(null);
   const [fadeIn, setFadeIn] = useState(false);
-  const intervalRef = useRef();
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const testimonialsLength = testimonials.length;
 
-  const handleDotClick = (index) => {
+  const handleDotClick = (index: number) => {
     setActiveTestimonial(index);
     setPulseIndex(index);
     // Reset interval on manual change
@@ -54,8 +54,12 @@ const WhatCustomerSay = () => {
 
   useEffect(() => {
     startAutoChange();
-    return () => clearInterval(intervalRef.current);
-  }, []);
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [startAutoChange]);
 
   // Fade-in animation on testimonial change
   useEffect(() => {
@@ -68,25 +72,25 @@ const WhatCustomerSay = () => {
     <>
       <section className=" relative mx-auto  mt-44 flex flex-col md:flex-row items-center gap-6">
         <div className="flex-1 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8  mb-20 text-center md:text-left ">
-          <h2 className="text-[#3F2305] font-bold text-5xl uppercase tracking-widest">
+          <h2 className="text-[#3F2305] font-bold sm:text-5xl uppercase tracking-widest">
             WHAT
           </h2>
-          <h3 className="text-[#3F2305]   text-4xl font-extrabold mt-2">
+          <h3 className="text-[#3F2305]   sm:text-4xl font-extrabold mt-2">
             our <span className="text-[#4A7639] ">customers</span> say
           </h3>
-          <p className="text-gray-500 md:max-w-md mt-3 text-base sm:text-base ">
+          <p className="text-gray-500 md:max-w-md mt-3 text-[8px] sm:text-base ">
             Discover coffee made with love. Brewing happiness, one cup at a
             time.{" "}
           </p>
         </div>
         {/* Left  Flower Customer say */}
-        <img
+        <Image
           alt="Decorative coffee beans cluster with leaves
       on top left side"
           className="absolute  right-0 top-[-170px] lg:top-[-300px] hidden md:block sm:w-[220px] md:w-[280px] lg:w-[380px]"
-          height="319px"
+          height="319"
           src="/cr.png"
-          width="380px"
+          width="380"
         />
       </section>
       <div className="flex items-center flex-col gap-4 md:gap-0 md:flex-row  max-w-5xl mx-auto  bg-gray-50 px-6 md:mt-12 xl:mt-0">
@@ -125,7 +129,7 @@ const WhatCustomerSay = () => {
             fadeIn ? "animate-fade-in" : ""
           }`}
         >
-          <p className="text-white text-base leading-relaxed rbf">
+          <p className="text-white text-[8px] sm:text-base leading-relaxed rbf">
             {testimonials[activeTestimonial].description}
           </p>
 

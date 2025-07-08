@@ -39,7 +39,7 @@ export default function ImageSlider() {
   }, [auto]);
 
   /* change slide */
-  const go = (i) => {
+  const go = (i: number) => {
     setCurrent(i);
     setAuto(false);
     const id = setTimeout(() => setAuto(true), 3_000);
@@ -47,19 +47,19 @@ export default function ImageSlider() {
   };
 
   /* class helpers -------------------------------------------------------- */
-  const pos = (i) => {
+  const pos = (i: number) => {
     const left = (current - 1 + slides.length) % slides.length;
     const right = (current + 1) % slides.length;
 
     if (i === current) return "z-20 translate-x-0";
     if (i === left)
-      return "-translate-x-30 sm:-translate-x-50 md:-translate-x-70 lg:-translate-x-80 xl:-translate-x-96 z-10";
+      return "-translate-x-20 sm:-translate-x-50 md:-translate-x-70 lg:-translate-x-80 xl:-translate-x-96 z-10";
     if (i === right)
-      return "translate-x-30 sm:translate-x-50  md:translate-x-70 lg:translate-x-80 xl:translate-x-96 z-10";
+      return "translate-x-20 sm:translate-x-50  md:translate-x-70 lg:translate-x-80 xl:translate-x-96 z-10";
     return "opacity-0 scale-75 pointer-events-none";
   };
 
-  const size = (i) =>
+  const size = (i: number) =>
     i === current
       ? " w-48 h-64 sm:w-52 sm:h-72 md:w-72 md:h-96 lg:w-80 lg:h-[26rem]  xl:w-[410px] xl:h-[499px]"
       : "w-32 h-48 sm:w-36 sm:h-52 md:w-48 md:h-72  lg:w-56 lg:h-80 xl:w-[312px] xl:h-[379px] ";
@@ -84,11 +84,13 @@ export default function ImageSlider() {
                   i === current ? "cursor-pointer" : "cursor-default"
                 }`}
               >
-                <img
+                <Image
                   src={s.src}
                   alt={s.alt}
                   className="w-full h-full object-cover select-none"
                   draggable={false}
+                  width={820}
+                  height={820}
                 />
 
                 {/* dark‑to‑clear fade on centre frame */}

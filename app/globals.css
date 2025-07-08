@@ -111,6 +111,19 @@ body {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .hero_desc::before {
+    content: "";
+    height: 0;
+    width: 0;
+    background-color: #c90000;
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .hero_left_p {
   font-family: var(--font-rob);
   font-size: 12px;

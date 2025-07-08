@@ -1,15 +1,18 @@
+import Image from "next/image";
+
 const Footer = () => {
   return (
     <footer className="bg-[#111111] text-gray-400 ">
       <div className="max-w-[1189px] mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
         <div>
-          <img
+          <Image
             alt="Coffee shop logo in footer"
-            className=" mb-2 w-32"
-            height="40"
-            src="./logo.png"
-            width="40"
+            className=" mb-2 "
+            height={128}
+            src="/logo.png"
+            width={128}
           />
+
           <p className="text-sm">
             Brewing happiness one cup at a time. Visit us for the finest coffee.
           </p>
