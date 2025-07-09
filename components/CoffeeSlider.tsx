@@ -101,7 +101,7 @@ export default function ImageSlider() {
                 {/* top‑right “Explore” badge */}
                 {i === current && (
                   <div className="absolute top-0 right-0 flex items-center gap-2 rounded-tr-2xl rounded-bl-2xl bg-white/90 backdrop-blur px-3 py-2 space-x-1">
-                    <span className="text-sm font-semibold leading-tight text-black text-left">
+                    <span className="text-sm font-semibold leading-tight text-black text-left xxxs:text-[1px]">
                       Explore
                       <br />
                       More
