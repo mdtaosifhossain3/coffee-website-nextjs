@@ -1,9 +1,8 @@
 import Image from "next/image";
-
 const Hero = () => {
   return (
-    <div className="  min-h-[862px] hero  ">
-      <section className="relative max-w-[1440px] mx-auto  px-4 xl:px-6 lg:px-8 pt-24 flex flex-col md:flex-row items-center md:items-start gap-6 text-center xl:text-left ">
+    <div className="min-h-[862px] hero w-full flex  items-center justify-center   ">
+      <section className="relative max-w-[1440px] mx-auto  px-4 xl:px-6 lg:px-8  flex flex-col md:flex-row items-end justify-around md:items-start gap-30 text-center xl:text-left  ">
         <div className="flex-1 max-w-md md:max-w-none">
           {/* Hero Title Tag */}
           <h1 className="text-white text-[32px] sm:text-[40px]  md:text-[48px] font-[700]  leading-[1.5] tracking-wide text-center xl:text-left">
@@ -16,7 +15,7 @@ const Hero = () => {
             cup at a <br className="  sm:hidden" /> time.
           </h1>
           {/* Hero Description */}
-          <div className=" sm:pl-16">
+          <div className=" xl:pl-16">
             <p className="mt-6  hero_desc   text-center xl:text-left ">
               Discover coffee made with love. Brewing happiness, one{" "}
               <br className=" hidden xl:block" />

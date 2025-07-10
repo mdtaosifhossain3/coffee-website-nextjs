@@ -18,7 +18,9 @@ const Header = () => {
     <>
       {/* <!-- Header --> */}
       <nav
-        className={`flex items-center justify-between  sticky top-0 z-50  bg-opacity-90 backdrop-blur-md px-4 md:px-8   hero`}
+        className={`flex items-center justify-between fixed  top-0 z-50 w-full   px-4 md:px-8 ${
+          scrolled ? "bg-black" : "bg-transparent"
+        } `}
       >
         {/* <!-- Logo --> */}
         <div className="flex items-center space-x-4 transition-all duration-300">
@@ -29,12 +31,12 @@ const Header = () => {
             height={scrolled ? 72 : 140.7}
             className={`ml-4 md:ml-0 transition-all duration-300 ${
               scrolled ? "!w-20 !h-18" : "!w-[155px] !h-[140.7px]"
-            }`}
+            } `}
           />
         </div>
 
         {/* <!-- Navigation Links --> */}
-        <ul className="hidden  md:flex space-x-18 font-[600] text-white   xl:text-[20px] nav_button ">
+        <ul className="hidden  md:flex md:space-x-10  lg:space-x-18 font-[600] text-white   xl:text-[20px] font-pop ">
           <li className="home">
             <Link href={"/"}>Home</Link>
           </li>

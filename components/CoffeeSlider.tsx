@@ -66,7 +66,20 @@ export default function ImageSlider() {
 
   /* --------------------------------------------------------------------- */
   return (
-    <div className="max-w-[1440px] mx-auto px-4 tt">
+    <div className="max-w-[1440px] mx-auto px-4 ">
+      <div className=" pt-20">
+        <h1 className=" text-[48px] text-black font-bold  text-center ">
+          We <span className="text-[#4A7639]">provide</span>
+        </h1>
+        <h2 className=" text-black text-center text-[40px] font-semibold">
+          <span className="text-[#4A7639]">quality</span> coffee to deliver
+        </h2>
+        <p className=" text-[#363636] text-center text-base font-normal mt-4">
+          Discover coffee made with love. Brewing{" "}
+          <br className="hidden md:block" /> happiness, one cup at a time.
+        </p>
+      </div>
+
       {/* Slider ----------------------------------------------------------- */}
       <div className="relative py-12 lg:px-32">
         <div className="relative flex items-center justify-center h-80 sm:h-[22rem] lg:h-[550px] overflow-visible">
