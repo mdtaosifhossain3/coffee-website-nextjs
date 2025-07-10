@@ -1,6 +1,5 @@
 import ImageSlider from "@/components/CoffeeSlider";
 import OurProduct from "@/components/OurProduct";
-import Footer from "@/components/Footer";
 import TodaySpecial from "@/components/TodaySpecial";
 import GalleryImage from "@/components/GalleryImage";
 import WhatCustomerSay from "@/components/WhatCustomerSay";

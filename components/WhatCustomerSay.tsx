@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 const testimonials = [
   {
     id: 1,
@@ -46,11 +46,11 @@ const WhatCustomerSay = () => {
   };
 
   // Auto change function
-  const startAutoChange = () => {
+  const startAutoChange = useCallback(() => {
     intervalRef.current = setInterval(() => {
       setActiveTestimonial((prev) => (prev + 1) % testimonialsLength);
     }, 4000);
-  };
+  }, [testimonialsLength]);
 
   useEffect(() => {
     startAutoChange();
