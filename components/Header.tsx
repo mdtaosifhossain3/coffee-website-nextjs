@@ -17,7 +17,9 @@ const Header = () => {
   return (
     <>
       {/* <!-- Header --> */}
-      <nav className="flex items-center justify-between  sticky top-0 z-50 bg-black bg-opacity-90 backdrop-blur-md px-4 md:px-8">
+      <nav
+        className={`flex items-center justify-between  sticky top-0 z-50  bg-opacity-90 backdrop-blur-md px-4 md:px-8   hero`}
+      >
         {/* <!-- Logo --> */}
         <div className="flex items-center space-x-4 transition-all duration-300">
           <Image

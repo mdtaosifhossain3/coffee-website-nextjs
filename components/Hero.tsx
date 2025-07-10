@@ -3,7 +3,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <div className="  min-h-[862px] hero  ">
-      <section className="relative max-w-[1440px] mx-auto  px-4 xl:px-6 lg:px-8 pt-24 flex flex-col md:flex-row items-center md:items-start gap-6 text-center xl:text-left">
+      <section className="relative max-w-[1440px] mx-auto  px-4 xl:px-6 lg:px-8 pt-24 flex flex-col md:flex-row items-center md:items-start gap-6 text-center xl:text-left ">
         <div className="flex-1 max-w-md md:max-w-none">
           {/* Hero Title Tag */}
           <h1 className="text-white text-[32px] sm:text-[40px]  md:text-[48px] font-[700]  leading-[1.5] tracking-wide text-center xl:text-left">
