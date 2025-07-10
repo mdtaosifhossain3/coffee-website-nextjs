@@ -93,10 +93,10 @@ const WhatCustomerSay = () => {
           width="380"
         />
       </section>
-      <div className="flex items-center flex-col gap-4 md:gap-0 md:flex-row  max-w-5xl mx-auto  bg-gray-50 px-6 md:mt-12 xl:mt-0">
+      <div className="flex items-center flex-col gap-4 md:gap-0 md:flex-row  sm:max-w-5xl mx-auto  bg-gray-50 px-6 md:mt-12 xl:mt-0">
         {/* Customer Profile Section */}
-        <div className="flex flex-col items-center bg-[#436934] rounded-2xl p-6 min-w-[302px] min-h-[315px] ">
-          <div className="w-[270px] h-[200px] rounded-2xl overflow-hidden mb-4 bg-gray-200">
+        <div className="flex flex-col items-center bg-[#436934] rounded-2xl p-6  sm:min-w-[302px] sm:min-h-[315px] ">
+          <div className="sm:w-[270px] sm:h-[200px] rounded-2xl overflow-hidden mb-4 bg-gray-200">
             <Image
               src={testimonials[activeTestimonial].image}
               alt="Sophia M."

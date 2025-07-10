@@ -45,8 +45,6 @@ export default function Home() {
         <GalleryImage />
         <WhatCustomerSay />
         <TodaySpecial />
-
-        <Footer />
       </div>
     </div>
   );

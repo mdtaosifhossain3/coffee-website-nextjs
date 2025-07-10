@@ -100,22 +100,42 @@ const Header = () => {
       <div
         className={`${
           menuOpen ? "block" : "hidden"
-        } bg-black bg-opacity-90 text-white px-6 py-4 space-y-4 font-semibold text-lg md:hidden`}
+        } fixed top-10 left-0 w-full z-40 bg-black bg-opacity-90 text-white px-6 py-4 pt-20 space-y-4 font-semibold text-lg md:hidden transition-all duration-300`}
         id="mobile-menu"
+        style={{ pointerEvents: menuOpen ? "auto" : "none" }}
       >
-        <Link className="block hover:text-green-500 transition" href="/">
+        <Link
+          className="block hover:text-green-500 transition"
+          href="/"
+          onClick={() => setMenuOpen(false)}
+        >
           Home
         </Link>
-        <Link className="block hover:text-green-500 transition" href="/">
+        <Link
+          className="block hover:text-green-500 transition"
+          href="/"
+          onClick={() => setMenuOpen(false)}
+        >
           About
         </Link>
-        <Link className="block hover:text-green-500 transition" href="/">
+        <Link
+          className="block hover:text-green-500 transition"
+          href="/"
+          onClick={() => setMenuOpen(false)}
+        >
           Shop
         </Link>
-        <Link className="block hover:text-green-500 transition" href="/">
+        <Link
+          className="block hover:text-green-500 transition"
+          href="/"
+          onClick={() => setMenuOpen(false)}
+        >
           Gallery
         </Link>
-        <button className="w-full border border-green-600 text-green-600 px-4 py-2 rounded-md font-semibold hover:bg-green-600 hover:text-black transition">
+        <button
+          className="w-full border border-green-600 text-green-600 px-4 py-2 rounded-md font-semibold hover:bg-green-600 hover:text-black transition"
+          onClick={() => setMenuOpen(false)}
+        >
           Contact Us
         </button>
       </div>

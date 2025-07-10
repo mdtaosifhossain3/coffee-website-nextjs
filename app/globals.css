@@ -156,3 +156,11 @@ body {
 .rbf {
   font-family: var(--font-rob);
 }
+
+@media screen and (max-width: 350px) {
+  .left_right_slider {
+    height: 0;
+    width: 0;
+    display: none;
+  }
+}
