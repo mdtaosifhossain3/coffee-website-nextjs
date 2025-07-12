@@ -41,13 +41,13 @@ const Header = () => {
             <Link href={"/"}>Home</Link>
           </li>
           <li className=" text-[#B9B9B9] hover:text-white">
-            <Link href={"/"}>About</Link>
+            <Link href={"/about"}>About</Link>
           </li>
           <li className=" text-[#B9B9B9] hover:text-white">
-            <Link href={"/"}>Shop</Link>
+            <Link href={"/shop"}>Shop</Link>
           </li>
           <li className=" text-[#B9B9B9] hover:text-white">
-            <Link href={"/"}>Delivery</Link>
+            <Link href={"/gallery"}>Gallery</Link>
           </li>
         </ul>
 
@@ -117,21 +117,21 @@ const Header = () => {
         </Link>
         <Link
           className="block hover:text-green-500 transition"
-          href="/"
+          href="/about"
           onClick={() => setMenuOpen(false)}
         >
           About
         </Link>
         <Link
           className="block hover:text-green-500 transition"
-          href="/"
+          href="/shop"
           onClick={() => setMenuOpen(false)}
         >
           Shop
         </Link>
         <Link
           className="block hover:text-green-500 transition"
-          href="/"
+          href="/gallery"
           onClick={() => setMenuOpen(false)}
         >
           Gallery
